@@ -1,0 +1,697 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <title>navigationbar</title>
+        <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+        <style>
+            * {
+    margin: 0;
+    padding: 0;
+    font-family: Segoe UI;
+}
+
+.nav-bar{
+    height: 70px;
+    background: #3d3434;
+}
+
+.brand{
+    float: left;
+    position: absolute;
+    padding-left: 20px;
+    line-height: 70px;
+    font-size: 1.5em;
+}
+
+.brand a{
+    text-decoration: none;
+    color: white;
+}
+
+.nav-container{
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+nav{
+    float: right;
+}
+
+nav ul{
+    list-style: none;
+}
+
+nav ul li{
+    float: left;
+    position: relative;
+}
+
+nav ul li a{
+    display:block;
+    padding: 0 20px;
+    line-height: 70px;
+    background: #3d3434;
+    text-decoration: none;
+    color: #fff;
+    
+}
+
+nav ul li a:hover{
+    background:black;
+    color: #fff;
+}
+
+nav ul li a:not(:only-child):after{
+     padding-left: 5px;
+
+
+}
+
+nav ul li ul li {
+    min-width: 190px;
+}
+
+nav ul li ul li a{
+    padding: 15px;
+    line-height: 20px;
+}
+
+.nav-dropdown{
+    position: absolute;
+    display: none;
+    z-index: 1;
+}
+
+.nav-mobile{
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 70px;
+    width: 70px;
+}
+
+#nav-toggle{
+    position: absolute;
+    left: 18px;
+    top: 22px;
+    cursor: pointer;
+    padding: 10px 35px 15px 0px;
+}
+
+#nav-toggle span,
+#nav-toggle span::before,
+#nav-toggle span::after{
+    position: absolute;
+    display: block;
+    content: '';
+    background: #fff;
+    height: 5px;
+    width: 35px;
+    transition: all 300ms ease-in-out;
+}
+
+#nav-toggle span::before{
+    top: -10px;
+}
+
+#nav-toggle span::after{
+    bottom: -10px;
+}
+
+#nav-toggle.active span{
+    background-color: transparent;
+}
+
+#nav-toggle.active span::before, #nav-toggle.active span::after{
+    top: 0;
+}
+
+#nav-toggle.active span::before{
+    transform: rotate(45deg);
+}
+
+#nav-toggle.active span::after{
+    transform: rotate(-45deg);
+}
+
+@media only screen and (max-width: 768px) {
+
+    .nav-mobile{
+        display: block;
+    }
+
+    nav{
+        width: 100%;
+        padding: 70px 0 15px;
+    }
+
+    nav ul{
+        display: none;
+    }
+
+    nav ul li {
+        float: none;
+    }
+
+    nav ul li a{
+        padding: 15px;
+        line-height: 20px;
+        padding-left: 25%;
+    }
+
+
+    nav ul li ul li a{
+        padding-left: 30%;
+    }
+
+    .nav-dropdown{
+        position: static;
+    }
+}
+
+@media screen and (min-width: 799px){
+    .nav-list{
+        display: block !important;
+    }
+    
+}
+/*added*/
+.bar1, .bar2, .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: RED;
+  margin: 6px 0;
+  transition: 0.4s;
+  float:calc(50%);
+  
+}
+
+/* Rotate first bar */
+.change .bar1 {
+  transform: translate(0, 11px) rotate(-45deg);
+}
+
+/* Fade out the second bar */
+.change .bar2 {opacity: 0;}
+
+/* Rotate last bar */
+.change .bar3 {
+  transform: translate(0, -11px) rotate(45deg);
+}
+/*hero section*/
+.parent{
+       font-size: 41px;
+      display: flex;
+
+      margin: 35px;
+     
+       
+       }
+    
+
+      .button{
+        margin-left: 250px;
+        height: 60px;
+        width: 350px;
+        background-color: rgb(150, 113, 21);
+        color: rgb(80, 75, 75);
+        font-style: oblique;
+       
+      }
+      .SLOGAN{
+        font-size:large;
+        opacity: 1;
+            transform: translateX(0);
+      }
+
+     @media screen and(max-width:800px) {
+        .image{
+            position:absolute;
+            right: 5%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 30px;
+            height: 30px;
+            width: 30px;
+            padding: 2em;
+            z-index: 1000;
+            transition:background-size 0.3s ease-in-out;
+            -webkit-transition: background-size ease-in-out ;
+            -moz-transition: background-size ease-in-out;
+
+        }
+        
+     }
+     /* .about{
+
+        background-color: #1b1717;
+      
+     }
+     h2{
+    text-align: center;
+
+     }
+
+     h4{
+        text-align: center;
+        font-style: italic;
+     }
+     h5{
+        background-image: url(images/be58aef91df1fc128435992a60c2103c.jpg);
+        height: 500px;
+        width: 200px;
+     } */
+
+     .aboutUs{
+        width: 100%;/*CHGE */
+        margin: 0 auto;
+        margin-top: 2rem;
+       
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #1b1717;
+        flex-direction: column;
+     }
+
+     .aboutUs h2{
+        padding-top:15px;
+        font-size:4rem;
+
+
+
+     }
+     .container{
+        display: flex;
+        width: 100%;
+     }
+     .container image{
+        width: 60%;
+
+     }
+     .image img{
+        width: 100%;
+        height: 100%;
+
+     }
+     .content{
+        width: 80%;
+        margin-left: 2rem;
+
+     }
+     .content{
+        font-size: 1.2rem;
+        line-height: 125%;
+
+    
+     }
+     .content button{
+        display: block;
+        justify-content: center;
+        padding: 10px 15px;
+        border: none;
+        background-color:red;
+        border-radius: 5px;
+
+     }
+     .content button a{
+        text-decoration: none;
+        font-size: 18px;
+        color:blue;
+
+     }
+
+     /* products */
+     .product{
+        width: 100%; /*CHGE*/
+        margin: 0 auto;
+        background-color: #3d3434;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+     }
+     .featureProduct{
+        display: flex;
+        justify-content: center;
+
+     }
+
+     .item{
+        width: 33.3%;
+        background-color: rgb(105, 94, 78);
+        margin-right: 10px;
+        
+     }
+     .item img {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+     }
+
+     .item p{
+        text-align: center;
+        color: black;
+        font-size: 1rem;
+     }
+     .item button{
+
+        display: block;
+        justify-content: center;
+        padding: 10px 15px;
+        border: none;
+        background-color: red;
+        border-radius: 5px;
+     }
+     .item button a{
+        text-decoration: none;
+        font-size: 18px;
+        color: blue;
+     }
+     /* contact */
+     .content{
+        width: 100%;/*chge*/
+        margin: 0 auto;
+        padding-top: 2.5;
+        background-color:bisque;
+     }
+     .contact .content{
+        display: flex;
+        width: 100%;
+
+     }
+     .content .form{
+        width: 60%;
+
+     }
+
+     .content .item{
+        width: 40%;
+     }
+     
+     .form form{
+        display: flex;
+        flex-direction: column;
+        margin-right: 5rem;
+       justify-items: center;
+
+        
+
+     }
+     form input{
+        margin-bottom: 1rem;
+        display: block;
+        border: none;
+        height: 3rem;
+        background-color: rgb(105, 94, 78);
+        border-radius: 5px;
+
+
+     }
+     .form textarea{
+        border-radius: 5px;
+        margin-bottom: 1rem;
+        border: none;
+        background-color: white;
+
+     }
+     ::placeholder{
+        color: azure;
+        padding-left:1rem ; 
+
+
+
+     }
+
+
+
+     
+
+    
+
+
+
+        </style>
+    </head>
+    <body>
+        <div class="nav-bar">
+            <div class="nav-container">
+                <div class="brand">
+                    <a href="#"><b>MCEBO</b></a>
+                </div>
+                <nav>
+                    <div class="nav-mobile">
+                        <a href="#" id="nav-toggle">
+                            <span></span>
+                        </a>
+                    </div>
+                    <ul class="nav-list">
+                        <li><a href="#">HOME</a></li>
+                        <li><a href="#">ABOUT US</a></li>
+                        <li><a href="#">SERVICES</a></li>
+                        <li><a href="#">COLLECTIONS</a></li>
+                        <li><a href="#">CONTACTS</a></li>
+                        
+                        <ul class="nav-dropdown">
+                            <li><a href="#">HOME</a></li>
+                            <li><a href="#">ABOUT US</a></li>
+                            <li><a href="#">COLLECTIONS</a></li>
+                            <li><a href="#">CONTACTS</a></li>
+                        </ul>
+                        </li>
+                        
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="nav">
+            <ul>
+            <li><i class="fa fa-home"></i></li>
+            </ul>
+
+        </div>
+        <div>
+            <img src="" alt="">
+        </div>
+        <i class="fa-solid fa-gem fa-beat"></i>
+
+        
+
+        <div class="parent">
+            <div id="image"><img  height="610px" width="500px">
+                
+                
+    
+            </div>
+           <div>
+            <h1>COMPLETE YOUR </h1>
+          <h1>LOOK</h1> 
+          <h1> WITH A DASH OF</h1>
+           <h1>FINERY</h1>
+           <h2 class="SLOGAN">JEWELRY DESTINY TO DESIGN OWN FINERY OR CHOOSE FROM OUR COLLECTIONS</h2>
+        
+        <button class="button">UNLOCK YOUR LOOK</button>
+
+    </div>
+</div>
+        <!-- <div class="about"> 
+            <h2>ACHIEVEMENTS</h2>
+            <h4>NUMBERS DON'T LIE</h4>
+            <h5><img src="images/be58aef91df1fc128435992a60c2103c.jpg" height="500px" width="500px"></h5>
+        </div> -->
+
+        <!-- about -->
+
+
+
+        <section class="aboutUs">
+            <h2>About Us</h2>
+            <h2 class="container"></h2>
+            <div class="image" >
+                <img src="images/be58aef91df1fc128435992a60c2103c.jpg" alt="">
+                </div>
+                <div class="content">
+                    <p>Like tiny wind chimes our jewelry are 
+                        are a cast in silver, cold to the touch yet
+                        warm on skin.
+                        
+                        Our range of products comes from the 
+                        
+                        purest raw minerals embarked with 
+                        
+                        scent. 
+                        
+                        Mcebo creations deals with a range of 
+                        jewelry , from the wire work jewelry to 
+                        Kundan jewelry and designing of own 
+                        jewelry</p>
+                     <button><a href="./pages/about.html">Learn More</a></button>
+                </div>
+
+            <!-- prducts -->
+        </section>
+
+        <section class="product">
+            <h2>OUR PRODUCTS</h2>
+            <div class="featureProduct">
+                <div class="item">
+                    <h3>ANTIQUE JEWELRY</h3>
+                    <img src="images/4052cd5ed83ab0e103374062db5eec4e.jpg">
+                    <p>Antique jewelry is sometimes expressed as vintage 
+
+                        jewelry the difference being the time period.
+                    
+                        jewellery is considered antique when its 100 years old 
+                        
+                        while vintage if its 50 years old.</p>
+                         <button><a href="pages/product1.html">Learn More</a></button>
+                </div>
+
+
+                <div class="item"><h3>KUNDAN JEWELRY</h3>
+                    <img src="images/f6df0fe251bc3e5bc7232798aba9f652--top-models-hair-makeup.jpg" >
+                    <p>Kundan in Sanskrit means ‘pure gold’. our Kundan jewelry 
+
+                        is a style of setting gems usually uncut diamond or polks 
+                        
+                        using carat gold foil.</p>
+                         <button><a href="pages/product2.html">Learn More</a></button>
+                        </div>
+
+
+                <div class="item">
+                    <h3>MINAKARI JEWELRY</h3>
+                    <img src="images/fe8369a0b7fb26e0aa4d4b608dc8c6af.jpg">
+                    <p>This is inspired by the idian art of enamelling
+
+                        metal with vibrant colours and beautiful designs</p>
+                         <button><a href="pages/product3.html">Learn More</a></button>
+                        </div>
+
+            </div>
+        </section>
+
+        <section class="contact">
+            <h2>Contacts Us</h2>
+            <div class="content">
+                <div class="form">
+                    <form action="">
+                    <input type="email" placeholder="Enter your Email">
+                    <input type="text" placeholder="Enter your Subject">
+                    <textarea  placeholder="Enter your Message" id=""cols="30" rows="10"></textarea>
+                    <input type="submit" value="Submit">
+                    </form>
+                </div>
+                <div class="image">
+                    <img src="images/4052cd5ed83ab0e103374062db5eec4e.jpg" alt="">
+                </div>
+            </div>
+        </section>
+
+        <div> list of.....</div>
+
+
+
+        
+       
+
+
+
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+        <script src="script.js"></script>
+
+
+        <script>
+            $(document).ready(function() {
+    $('nav ul li a:not(:only-child)').click(function(e) {
+        $(this).siblings('.nav-dropdown').toggle();
+        e.stopPropagation();
+    });
+
+    $('html').click(function(){
+        $('.nav-dropdown').hide();
+    })
+    $('#nav-toggle').click(function(){
+        $('nav ul').slideToggle();
+    })
+    $('#nav-toggle').on('click', function(){
+        this.classList.toggle('active');
+    });
+});
+
+
+/*added*/
+
+function myFunction(x) {
+  x.classList.toggle("change");
+}
+
+
+/*hero section*/
+const hero=(SLOGAN)=>{
+            SLOGAN.classList.add("SLOGAN");
+        
+        }
+        let SLOGAN= document.querySelectorAll(".SLOGAN");
+
+        const animateAll=(animate)=>{
+       
+       setTimeout(function(){
+           animate1(SLOGAN[0]);
+           setTimeout(()=>{
+               animate1(SLOGAN[1]);
+               setTimeout(()=>{
+                   animate1(SLOGAN[2]);
+               },1000)
+           },1000);
+       },1000); 
+
+      
+
+
+     }
+     animateAll("SLOGAN")
+
+    //  ADDED
+
+
+    var myElement = document.getElementById('image'),
+    imgList = [
+  "images/15e8f0d91911fee8bf55f56ddb10eb61.jpg",
+  "images/f6df0fe251bc3e5bc7232798aba9f652--top-models-hair-makeup.jpg",
+  "images/fe8369a0b7fb26e0aa4d4b608dc8c6af.jpg",
+];
+function changeImage (myElement, imgList) {
+  setInterval(function(){
+    randomImage = Math.floor( Math.random() * imgList.length);
+    myElement.style.backgroundImage = "url('" + imgList[randomImage] + "')";
+  }, 1000);
+}
+changeImage(myElement, imgList);
+
+
+
+        </script>
+
+
+
+
+
+        
+    </body>
+    </html>
+
+
+
+
+    
